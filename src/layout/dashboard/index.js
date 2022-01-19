@@ -40,7 +40,11 @@ function Dashboard() {
 
 
   const handleSearch =(value)=>{
-    const newValue = value.split(' ').join('')
+    console.log(value)
+    let newValue = value
+    if(typeof value !== 'number'){
+      newValue= value.split(' ').join('')
+    }
     setCurrentGeolocation(newValue)
   }
 

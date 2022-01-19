@@ -18,6 +18,10 @@ function Home() {
         params={
           q: location
         }
+      }else if(typeof location === 'number'){
+        params={
+          id: location
+        }
       }else{
         params = location
       }
