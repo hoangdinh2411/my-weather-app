@@ -1,0 +1,57 @@
+%button-basic {
+  min-width: $btnMinWidth;
+  border-radius: $mediumBr;
+  background-color: var(--primaryColor);
+  color: var(--themeColor);
+
+  height: $btnHeight;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  @include displayFlex(center, center);
+  @include transition;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+%input-basic {
+  width: 100%;
+  outline: none;
+  padding: 0.8rem 4.5rem 0.8rem 1.5rem;
+  position: relative;
+  font-size: 1.6rem;
+  border-radius: $mediumBr;
+  @include transition;
+
+  &::-webkit-search-cancel-button {
+    position: relative;
+    right: -1rem;
+  }
+}
+
+%iconOnInput-basic {
+  position: absolute;
+  display: block;
+  font-size: 1.8rem;
+  color: var(--primaryColor);
+}
+
+%card-basic {
+    width: 100%;
+    max-width: $cardWith;
+    border-radius: $largeBr;
+    padding: 20px;
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.1);
+    min-height: $cardMinHeight;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

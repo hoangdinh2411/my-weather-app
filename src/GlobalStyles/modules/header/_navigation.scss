@@ -1,0 +1,151 @@
+.nav-wrapper {
+  width: $navMaxWidth;
+  display: flex;
+  overflow: hidden;
+  @include transition;
+  animation: hideMenu 0.3s linear;
+  animation: showMeu 0.3s linear;
+  height: 100%;
+  svg {
+    height: 3.5rem;
+    width: 3.5rem;
+    padding: 0.5rem;
+    border-radius: $smallBr;
+    color: var(--textColor);
+    margin-right: 1rem;
+  }
+  &.active {
+    width: $navWidth;
+    justify-content: center;
+  }
+
+  .menubar {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__logo {
+      height: $topHeight;
+      display: flex;
+      img {
+        width: $logoSize;
+        height: $logoSize;
+        border-radius: $mediumBr;
+        object-fit: cover;
+        margin: auto;
+        @include transition;
+      }
+    }
+    ul {
+      // padding: 0 20px;
+      flex:1;
+      li {
+        width: 100%;
+        cursor: pointer;
+        margin-bottom: 1rem;
+
+        &:hover {
+          svg {
+            background-color: var(--textColor);
+            color: var(--themeColor);
+          }
+          span {
+            color: var(--textColor);
+          }
+        }
+      }
+      a {
+        padding: 1.5rem;
+        @include displayFlex(none, center);
+        svg {
+          color: var(--primaryColor);
+        }
+        span {
+          font-size:1.6rem;
+          color: var(--textColor);
+          @include transition;
+          animation: opacityTitle;
+          font-weight: 600;
+          
+        }
+      }
+    }
+    label {
+      height: $bottomHeight;
+      @include displayFlex(right, none);
+      svg {
+        color: var(--textColor);
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+  }
+}
+
+.nav-wrapper.active {
+  .menubar {
+    img {
+      $imgSize: 4.5rem;
+      width: $imgSize;
+      height: $imgSize;
+    }
+
+    ul {
+      padding: 0;
+    }
+    li {
+      @include displayFlex(center, none);
+
+      svg {
+        margin: 0;
+        box-shadow: 0.3rem 0.5rem 1rem rgba($color: #111, $alpha: 0.1);
+      }
+      span {
+        display: none;
+      }
+    }
+    label {
+      justify-content: center;
+      svg {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@keyframes hideMenu {
+  0% {
+    width: $navMaxWidth;
+  }
+  25% {
+    width: $navMaxWidth - ($navMaxWidth * 0.25);
+  }
+  50% {
+    width: $navMaxWidth - ($navMaxWidth * 0.5);
+  }
+  75% {
+    width: $navMaxWidth - ($navMaxWidth * 0.75);
+  }
+  100% {
+    width: $navWidth;
+  }
+}
+@keyframes showMeu {
+  100% {
+    width: $navMaxWidth;
+  }
+  75% {
+    width: $navMaxWidth + ($navMaxWidth * 0.25);
+  }
+  50% {
+    width: $navMaxWidth + ($navMaxWidth * 0.5);
+  }
+  25% {
+    width: $navMaxWidth + ($navMaxWidth * 0.75);
+  }
+  0% {
+    width: $navWidth;
+
+  }
+}

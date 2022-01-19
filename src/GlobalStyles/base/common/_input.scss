@@ -1,0 +1,30 @@
+.input-boxes{
+    float:right;
+    position: relative;
+    // width: $inputMinWidth;
+    &__search {
+        @extend %input-basic;
+        border: 0.1rem solid rgba($color:#111, $alpha: 0.2);
+        &.error {
+            border: 0.1rem solid rgba($color:rgb(255,0,0), $alpha: 0.8);
+        
+        }
+        &.success {
+            border: 0.1rem solid var(--primaryColor);
+        }
+        
+        &:focus{
+            border: 0.1rem solid var(--primaryColor);
+        }
+        
+    }
+    i{
+        @extend %iconOnInput-basic;
+        top:50%;
+        transform:translateY(-50%);
+        right:1rem;
+    }
+}
+
+
+

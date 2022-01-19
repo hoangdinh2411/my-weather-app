@@ -1,0 +1,162 @@
+.weather-card {
+  @extend %card-basic;
+  @include displayFlex(space-between, none);
+  flex-direction: column;
+
+  .heading {
+    @include displayFlex(none, center);
+    &__icon {
+      img {
+        object-fit: cover;
+        @include imageSixe(6rem, 6rem, $circleBr);
+      }
+      margin-right: 1.5rem;
+    }
+    &__description {
+      p {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        font-weight: bolder;
+      }
+      span {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .parameters {
+    &__geoName {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+    &__temp {
+      font-size: 3rem;
+      font-weight: bolder;
+    }
+  }
+
+  .other {
+    margin-top:auto;
+
+    @include displayFlex(space-around, center);
+    %boxes {
+      border-radius: $mediumBr;
+      padding: 10px 15px;
+      text-align: center;
+      p {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+        letter-spacing: 0.5px;
+      }
+
+      span {
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+    }
+
+    .humidity {
+      @extend %boxes;
+      background-color: var(--primaryColor);
+      p,
+      span {
+        color: #fff;
+      }
+    }
+    .feelLike {
+      @extend %boxes;
+      background-color: var(--themeColor);
+      p,
+      span {
+        color: var(--textColor);
+      }
+    }
+  }
+}
+.wind-card {
+  @extend %card-basic;
+    @include displayFlex(space-between, none); 
+    flex-direction: column;   
+  .heading {
+    @include displayFlex(flex-start, center); 
+
+    &__icon {
+      img {
+        object-fit: cover;
+        @include imageSixe(4rem, 4rem, $circleBr);
+     
+      }
+      margin-right: 1.5rem;
+    }
+    &__description {
+      p {
+        font-size: 2rem;
+        font-weight: bolder;
+      }
+      span {
+        font-size: 1.6rem;
+      }
+    }
+    &__deg{
+        height:8rem;
+        width:8rem;
+        position:relative;
+        background-position : center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: auto;
+        border-radius: $largeBr;
+        span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%, -50%);
+            svg{
+                font-size:3rem;
+                color: #111;
+
+            }
+        }
+    }
+  }
+
+  .other {
+      margin-top:auto;
+    %boxes {
+      border-radius: $mediumBr;
+      padding: 10px 15px;
+      text-align: center;
+      p {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+        letter-spacing: 0.5px;
+      }
+
+      span {
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+    }
+
+    .parameters {
+        @include displayFlex(space-around, none);
+        flex-direction: row-reverse;
+      .humidity {
+        @extend %boxes;
+        background-color: var(--primaryColor);
+        p,
+        span {
+          color: #fff;
+        }
+      }
+      .feelLike {
+        @extend %boxes;
+        background-color: var(--themeColor);
+        p,
+        span {
+          color: var(--textColor);
+        }
+      }
+    }
+  }
+}
