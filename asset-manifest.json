@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/my-weather-app/static/css/main.38aa9eed.css",
+    "main.js": "/my-weather-app/static/js/main.0f784f5b.js",
+    "static/media/windBg.jpg": "/my-weather-app/static/media/windBg.8e0f0595414964c64fdd.jpg",
+    "static/media/Thunderstorm.jpg": "/my-weather-app/static/media/Thunderstorm.ba7f2c65b0e22cd08706.jpg",
+    "static/media/Snow.jpg": "/my-weather-app/static/media/Snow.8d5253ed6bd4a6510882.jpg",
+    "static/media/Clouds.jpg": "/my-weather-app/static/media/Clouds.27e33854fc9dec201eca.jpg",
+    "static/media/Rain.jpg": "/my-weather-app/static/media/Rain.3de4a288a02202796067.jpg",
+    "static/media/Clear.jpg": "/my-weather-app/static/media/Clear.c2ca6fc7529493af1232.jpg",
+    "static/media/windLogo.png": "/my-weather-app/static/media/windLogo.648fc07ebe8b13934ad3.png",
+    "static/media/logo.png": "/my-weather-app/static/media/logo.4be5d6162e912384327a.png",
+    "static/media/Drizzle.jpg": "/my-weather-app/static/media/Drizzle.581ccbc8fb526d6930e3.jpg",
+    "index.html": "/my-weather-app/index.html",
+    "main.38aa9eed.css.map": "/my-weather-app/static/css/main.38aa9eed.css.map",
+    "main.0f784f5b.js.map": "/my-weather-app/static/js/main.0f784f5b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38aa9eed.css",
+    "static/js/main.0f784f5b.js"
+  ]
+}
