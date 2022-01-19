@@ -10,7 +10,6 @@ function Searchbar({ handleSearch }) {
 
   
   useEffect(()=>{
-  
     weatherAPI.getCityList()
     .then(data=>{
       setCityList(data)
@@ -24,12 +23,9 @@ function Searchbar({ handleSearch }) {
         if(city.name.toLowerCase().includes(searchText.toLowerCase())){
           return city
         }
-  
         return undefined;
       }))
     }
-
-   
   },[searchText])
  
   const onHandleChange = (e) => {
